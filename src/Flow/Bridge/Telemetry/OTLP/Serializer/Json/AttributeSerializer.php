@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Flow\Bridge\Telemetry\OTLP\Serializer;
+namespace Flow\Bridge\Telemetry\OTLP\Serializer\Json;
 
 use Flow\Telemetry\Attributes;
 
@@ -17,11 +17,6 @@ use function is_int;
 use function is_string;
 
 /**
- * Serializes telemetry attributes to OTLP JSON format.
- *
- * OTLP attributes use a typed value wrapper format where each attribute
- * has a key and a value object with a type-specific field.
- *
  * @see https://opentelemetry.io/docs/specs/otlp/#otlphttp-request
  */
 final class AttributeSerializer

@@ -2,15 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Flow\Bridge\Telemetry\OTLP\Serializer;
+namespace Flow\Bridge\Telemetry\OTLP\Serializer\Json;
 
 use Flow\Telemetry\InstrumentationScope;
 
 /**
- * Serializes InstrumentationScope to OTLP JSON format.
- *
- * OTLP scope identifies the instrumentation library/component producing telemetry.
- *
  * @see https://opentelemetry.io/docs/specs/otel/glossary/#instrumentation-scope
  */
 final readonly class ScopeSerializer

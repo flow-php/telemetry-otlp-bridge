@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Flow\Bridge\Telemetry\OTLP\Tests\Unit\Serializer;
+namespace Flow\Bridge\Telemetry\OTLP\Tests\Unit\Serializer\Json;
 
 use DateTimeImmutable;
-use Flow\Bridge\Telemetry\OTLP\Serializer\SpanSerializer;
+use Flow\Bridge\Telemetry\OTLP\Serializer\Json\SpanSerializer;
 use Flow\Telemetry\Context\SpanId;
 use Flow\Telemetry\Context\TraceId;
 use Flow\Telemetry\InstrumentationScope;

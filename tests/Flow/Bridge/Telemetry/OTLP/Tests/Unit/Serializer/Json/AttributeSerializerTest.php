@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Flow\Bridge\Telemetry\OTLP\Tests\Unit\Serializer;
+namespace Flow\Bridge\Telemetry\OTLP\Tests\Unit\Serializer\Json;
 
-use Flow\Bridge\Telemetry\OTLP\Serializer\AttributeSerializer;
+use Flow\Bridge\Telemetry\OTLP\Serializer\Json\AttributeSerializer;
 use Flow\Telemetry\Attributes;
 use PHPUnit\Framework\TestCase;
 

@@ -2,15 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Flow\Bridge\Telemetry\OTLP\Serializer;
+namespace Flow\Bridge\Telemetry\OTLP\Serializer\Json;
 
 use Flow\Telemetry\Resource;
 
 /**
- * Serializes telemetry Resource to OTLP JSON format.
- *
- * OTLP resources contain attributes describing the entity producing telemetry.
- *
  * @see https://opentelemetry.io/docs/specs/otel/resource/sdk/
  */
 final readonly class ResourceSerializer

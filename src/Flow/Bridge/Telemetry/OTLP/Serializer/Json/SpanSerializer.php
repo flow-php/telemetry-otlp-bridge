@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Flow\Bridge\Telemetry\OTLP\Serializer;
+namespace Flow\Bridge\Telemetry\OTLP\Serializer\Json;
 
 use DateTimeImmutable;
 use Flow\Telemetry\Tracer\Span;
@@ -12,11 +12,6 @@ use Flow\Telemetry\Tracer\SpanLink;
 use Flow\Telemetry\Tracer\SpanStatusCode;
 
 /**
- * Serializes Span to OTLP JSON format.
- *
- * Converts Flow Telemetry Span objects to the OTLP JSON wire format,
- * including proper type conversions for timestamps, IDs, and enum values.
- *
  * @see https://opentelemetry.io/docs/specs/otlp/#otlphttp-request
  */
 final readonly class SpanSerializer
@@ -85,17 +80,6 @@ final readonly class SpanSerializer
         return $result;
     }
 
-    /**
-     * Convert SpanKind to OTLP span kind value.
-     *
-     * OTLP span kinds:
-     * 0 = SPAN_KIND_UNSPECIFIED
-     * 1 = SPAN_KIND_INTERNAL
-     * 2 = SPAN_KIND_SERVER
-     * 3 = SPAN_KIND_CLIENT
-     * 4 = SPAN_KIND_PRODUCER
-     * 5 = SPAN_KIND_CONSUMER
-     */
     private function serializeKind(SpanKind $kind): int
     {
         return match ($kind) {
@@ -130,13 +114,6 @@ final readonly class SpanSerializer
     }
 
     /**
-     * Serialize span status to OTLP format.
-     *
-     * OTLP status codes:
-     * 0 = STATUS_CODE_UNSET
-     * 1 = STATUS_CODE_OK
-     * 2 = STATUS_CODE_ERROR
-     *
      * @return array{code: int, message?: string}
      */
     private function serializeStatus(Span $span): array

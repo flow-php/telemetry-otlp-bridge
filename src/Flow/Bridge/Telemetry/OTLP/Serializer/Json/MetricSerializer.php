@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Flow\Bridge\Telemetry\OTLP\Serializer;
+namespace Flow\Bridge\Telemetry\OTLP\Serializer\Json;
 
 use DateTimeImmutable;
 use Flow\Telemetry\Meter\Metric;
@@ -12,11 +12,6 @@ use function array_merge;
 use function is_int;
 
 /**
- * Serializes Metric to OTLP JSON format.
- *
- * Converts Flow Telemetry Metric objects to the OTLP JSON wire format,
- * mapping metric types to their corresponding OTLP representations.
- *
  * @see https://opentelemetry.io/docs/specs/otlp/#otlphttp-request
  */
 final readonly class MetricSerializer

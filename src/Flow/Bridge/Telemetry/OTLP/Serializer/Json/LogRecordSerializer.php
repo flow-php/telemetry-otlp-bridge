@@ -2,17 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Flow\Bridge\Telemetry\OTLP\Serializer;
+namespace Flow\Bridge\Telemetry\OTLP\Serializer\Json;
 
 use Flow\Telemetry\Attributes;
 use Flow\Telemetry\Logger\Severity;
 use Flow\Telemetry\Tracer\SpanContext;
 
 /**
- * Serializes log records to OTLP JSON format.
- *
- * Converts Flow Telemetry log record arrays to the OTLP JSON wire format.
- *
  * @import-type TAttributeValue from Attributes
  *
  * @see https://opentelemetry.io/docs/specs/otlp/#otlphttp-request
